@@ -2,11 +2,6 @@
 # React Native Starter
 This repository is a simple starting point for mobile application using React-Native.
 
-![Screenshot_1](https://r.resimlink.com/QdmN.png) 
-![Screenshot_2](https://r.resimlink.com/Y4ICy.png) 
-![Screenshot_3](https://r.resimlink.com/x6QH.png)
-![Screenshot_4](https://r.resimlink.com/0ra0P.png)
-
 ## Getting Started
 Clone this repo and run the following commands.
 ```
