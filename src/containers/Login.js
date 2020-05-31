@@ -15,8 +15,8 @@ function Login({ navigation }) {
                 width={80} height={80} borderRadius={40} 
                 backgroundColor="#1f78d1"
                 borderWidth={2}
-                borderColor="#ffffff"
-                onPress={() => navigation.navigate("Dashboard")}>Ok</ButtonComponent>
+                borderColor="#ffffff" 
+                onPress={() =>  navigation.navigate('DrawerNavigation', { screen: 'Anasayfa' })}>Ok</ButtonComponent>
             </View>
         </View>
     )

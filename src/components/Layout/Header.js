@@ -1,16 +1,26 @@
 import React from 'react'
 import { Text, StyleSheet, View } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
+Icon.loadFont()
 
-const HeaderComponent = ({headerTitle, headerTitleColor, backgroundColor}) => {
-        return (
-            <View style={[styles.headerContainer, { backgroundColor: backgroundColor}]}>
-                <View style={styles.headerLeftContainer}></View>
-                <View style={styles.headerCenterContainer}>
-                    <Text style={[styles.headerTitleStyle, { color: headerTitleColor}]}>{headerTitle}</Text>
-                </View>
-                <View style={styles.headerRightContainer}></View>
+const HeaderComponent = ({ headerTitle, headerTitleColor, backgroundColor, iconLeftName, iconLeftEvent, iconRightEvent, iconRightName, iconLeftColor, iconRightColor, iconLeft, iconRight }) => {
+    return (
+        <View style={[styles.headerContainer, { backgroundColor: backgroundColor }]}>
+            <View style={styles.headerLeftContainer}>
+                {
+                    iconLeft ? <Icon name={iconLeftName} size={30} color={iconLeftColor} onPress={iconLeftEvent} /> : null
+                }
             </View>
-        )
+            <View style={styles.headerCenterContainer}>
+                <Text style={[styles.headerTitleStyle, { color: headerTitleColor }]}>{headerTitle}</Text>
+            </View>
+            <View style={styles.headerRightContainer}>
+                {
+                    iconRight ? <Icon name={iconRightName} size={30} color={iconRightColor} onPress={iconRightEvent}/> : null
+                }
+            </View>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -22,11 +32,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         shadowColor: "#000",
         shadowOffset: {
-	        width: 0,
-	        height: 2,
+            width: 0,
+            height: 2,
         },
         shadowOpacity: 0.25,
-        shadowRadius: 3.84,     
+        shadowRadius: 3.84,
         elevation: 5,
     },
     headerLeftContainer: {
