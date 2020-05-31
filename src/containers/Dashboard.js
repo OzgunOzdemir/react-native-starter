@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Button } from 'react-native'
+import { Text, View } from 'react-native'
 import { HeaderComponent } from '../components/Layout/Header.js'
 
 
@@ -11,7 +11,6 @@ function Dashboard({ navigation }) {
              iconLeftColor="#ffffff" iconLeftName="navicon"
              iconLeftEvent={() => navigation.openDrawer()}/>
             <Text>Dashboard Screen</Text>
-            <Button onPress={() => navigation.navigate('Login')} title="Go Back"></Button>
         </View>
     )
 }
