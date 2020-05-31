@@ -1,20 +1,20 @@
 import React from 'react'
-import { Text, View, Button } from 'react-native'
+import { Text, View } from 'react-native'
 import { HeaderComponent } from '../components/Layout/Header.js'
 
 
-function Dashboard({ navigation }) {
+function About({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <HeaderComponent backgroundColor="#1f78d1" headerTitle="Anasayfa"
+            <HeaderComponent backgroundColor="#1f78d1" headerTitle="Hakkımızda"
              headerTitleColor="#ffffff" iconLeft="true" iconRight="false"
              iconLeftColor="#ffffff" iconLeftName="navicon"
              iconLeftEvent={() => navigation.openDrawer()}/>
-            <Text>Dashboard Screen</Text>
-            <Button onPress={() => navigation.navigate('Login')} title="Go Back"></Button>
+            <Text>About Screen</Text>
         </View>
     )
 }
 
-export default Dashboard;
+export default About;
+
 

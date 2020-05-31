@@ -3,12 +3,12 @@ import { Text, StyleSheet, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 Icon.loadFont()
 
-const HeaderComponent = ({ headerTitle, headerTitleColor, backgroundColor, iconLeftName, iconRightName, iconLeftColor, iconRightColor, iconLeft, iconRight }) => {
+const HeaderComponent = ({ headerTitle, headerTitleColor, backgroundColor, iconLeftName, iconLeftEvent, iconRightEvent, iconRightName, iconLeftColor, iconRightColor, iconLeft, iconRight }) => {
     return (
         <View style={[styles.headerContainer, { backgroundColor: backgroundColor }]}>
             <View style={styles.headerLeftContainer}>
                 {
-                    iconLeft ? <Icon name={iconLeftName} size={30} color={iconLeftColor} /> : null
+                    iconLeft ? <Icon name={iconLeftName} size={30} color={iconLeftColor} onPress={iconLeftEvent} /> : null
                 }
             </View>
             <View style={styles.headerCenterContainer}>
@@ -16,7 +16,7 @@ const HeaderComponent = ({ headerTitle, headerTitleColor, backgroundColor, iconL
             </View>
             <View style={styles.headerRightContainer}>
                 {
-                    iconRight ? <Icon name={iconRightName} size={30} color={iconRightColor} /> : null
+                    iconRight ? <Icon name={iconRightName} size={30} color={iconRightColor} onPress={iconRightEvent}/> : null
                 }
             </View>
         </View>
