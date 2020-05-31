@@ -8,13 +8,13 @@ Clone this repo and run the following commands.
 npm install
 ```
 
-## How to run İOS
+## How to run IOS
 Run the following command for ios
 ```
 react-native run-ios
 ```
 
-## How to run ANDROİD
+## How to run ANDROID
 Run the following command for android
 ```
 react-native run-android
